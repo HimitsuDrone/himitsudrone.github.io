@@ -136,7 +136,6 @@ body {
 }
 
     #homepage a,div {
-        z-index: 1;
         background-blend-mode: multiply;
         background-repeat: no-repeat;
         background-size: cover;
