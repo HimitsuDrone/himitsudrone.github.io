@@ -1,0 +1,210 @@
+/*Horizontal Navigation Bar. Base Code is from W3Schools, modified by Himitsu.*/
+
+    .navbar { /*Also serves as buffer zone for main content*/
+        height: 38px;
+        width: 100%;
+    }   
+    .navbar ul { /*Foundation for the navbar*/
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #191213;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+    }
+    .navbar li { /*Adds the border in between items*/
+        float: left;
+        border-right:1px solid #bbb;
+    }
+    .navbar li:last-child { /*Psuedo-class where the last <li> does not trigger a white border */
+        border-right: none;
+    }
+    .navbar li a { /*Makes the "content" itself*/
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+    .navbar li a:hover:not(.active) { /*Any item WITHOUT the Active class has this color when hovered*/
+        background-color: black;
+    }
+    .navbar .active { /*Any item WITH the active tag is this spesific color*/
+        background-color: #ffb7c5;
+        color: black !important;
+    }
+
+/*Global Declarations*/
+* {
+    font-family:Helvetica, sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    text-align: center;
+}
+
+p {
+    text-align: justify;
+    text-align-last: left;
+}
+
+body {
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    color: white;
+    background-attachment: fixed;
+}
+
+.base {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.containerfull {
+    width: 100%;
+    height: auto;
+    background-color: rgba(0,0,0,0.5);
+    padding: 5px 10px;
+    border-radius: 25px;
+    margin-bottom: 10px;
+}
+
+
+.containerhalf {
+    width: 48%;
+    height: auto;
+    background-color: rgba(0,0,0,0.5);
+    padding: 5px 10px;
+    border-radius: 25px;
+    margin-bottom: 10px;
+}
+
+.container33 {
+    width: 30%;
+    height: auto;
+    background-color: rgba(0,0,0,0.5);
+    padding: 5px 10px;
+    border-radius: 25px;
+    margin-bottom: 10px;
+}
+
+.container25 {
+    width: 23%;
+    height: auto;
+    background-color: rgba(0,0,0,0.5);
+    padding: 5px 10px;
+    border-radius: 25px;
+    margin-bottom: 10px;
+}
+
+.welcome {
+    width: 35%;
+    height: auto;
+    margin: auto;
+    background-color: rgba(0,0,0,0.5);
+    padding: 5px 10px;
+    border-radius: 25px;
+}
+
+
+/*Animations*/
+
+/*Ifrit sticker animation*/
+@keyframes ifrit {
+    0% {left: 0px;}
+
+    100% {left: calc(100% - 160px);}
+}
+
+/* index.html */
+#homepage {
+    background-image: url(background-homepage.jpg);
+    background-size: 100% auto;
+    background-color: darkgrey;
+}
+
+    #homepage a,div {
+        z-index: 1;
+        background-blend-mode: multiply;
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: white;
+        text-decoration: none;
+    }
+
+    #homepage .containerhalf {
+        height: 412px;
+    }
+
+    #homepage .container33 {
+        height: 338px;
+    }
+
+    #homepage #ifritpath {
+        height: 0px;
+        width: 100%;
+        margin: 10px auto;
+    }
+
+        #homepage #ifritpath #ifrit {
+            width: 160px;
+            height: 160px;
+            position: relative;
+            animation-name: ifrit;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+/* about.html */
+#about {
+    background-image: url(background-about.webp);
+    background-size: 100% auto;
+    background-color: darkslategrey;
+}
+
+/* activities.html */
+#activities {
+    background-image: url(background-activities.webp);
+    background-size: 100% auto;
+    background-color: darkgrey;
+}
+
+#activities img,video {
+    width: 100%;
+    height: auto;
+}
+
+/* techhub.html */
+#techhub {
+    background-color: grey;
+}
+
+    #techhub .base img {
+        width: 100%; 
+    }
+
+/* reflection.html */
+#reflection {
+    background-image: url(background-imageseia.jpg);
+    background-size: 100% auto;
+    background-color: darkgrey;
+}
+
+/* extra.html */
+#extra {
+    background-image: url(background-extra.webp);
+    background-size: 100% auto;
+    background-color: grey;
+}
